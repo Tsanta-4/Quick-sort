@@ -1,7 +1,9 @@
+from random import randint
+
 def quick_sort(tab, start, last):
 	"""Fonction tri rapide"""
 	if start <= last:
-		pivot = last
+		pivot = randint(start, last)
 		pivot = partition(tab, start, last, pivot)
 		quick_sort(tab, start, pivot-1)
 		quick_sort(tab, pivot+1, last)
